@@ -1,0 +1,18 @@
+.profile-list {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.profile-list .profile-card {
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profile-list .profile-card:last-of-type {
+  margin-bottom: 0;
+}

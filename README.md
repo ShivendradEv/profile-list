@@ -1,8 +1,57 @@
-# React + Vite
+🚀 Profile List
+Profile List is a web application built with React and Vite ⚡, designed to help users view and manage a list of profiles. This project serves as a template for setting up a React app with Vite, including hot module replacement (HMR) and ESLint configuration.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Features
+✅ React with Vite – Superfast development environment
+🔥 Hot Module Replacement (HMR) – Live updates without refresh
+🛠 ESLint Integration – Maintains code quality & consistency
 
-Currently, two official plugins are available:
+📦 Installation
+1️⃣ Clone the repository
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+bash
+Copy
+Edit
+git clone https://github.com/ShivendradEv/profile-list.git
+cd profile-list
+2️⃣ Install dependencies
+
+bash
+Copy
+Edit
+npm install
+🚀 Usage
+▶️ Start the development server
+
+bash
+Copy
+Edit
+npm run dev
+🔨 Build for production
+
+bash
+Copy
+Edit
+npm run build
+👀 Preview the production build
+
+bash
+Copy
+Edit
+npm run preview
+📂 Project Structure
+📁 src/ – Source code
+📁 public/ – Static assets
+📄 index.html – Main HTML file
+📄 package.json – Project metadata & dependencies
+⚙️ vite.config.js – Vite configuration
+🛑 .gitignore – Files ignored in version control
+📜 README.md – Documentation (this file)
+
+🤝 Contributing
+Contributions are welcome! 🎉 Fork the repo, make changes, and submit a pull request.
+
+📜 License
+📄 This project is licensed under the MIT License. See the LICENSE file for details.
+
+💡 This project is based on the React + Vite template, providing a minimal setup for fast and efficient React development. 🚀

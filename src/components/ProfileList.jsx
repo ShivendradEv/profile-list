@@ -18,22 +18,26 @@ const ProfileList = () => {
 
     return (
         <>
-            {loading && <div>Loading...</div>}
-            {error && <div>{error}</div>}
-            {!loading && <div className='profile-list'>
-                {profiles && profiles.map(item => (
-                    <div key={item.id} className='profile-card'>
-                        <h2>{item.Name}</h2>
-                        <p>{item.email}</p>
-                        <p>{item.gender}</p>
-                        <p>{item.age}</p>
-                        <div>
-                            <NavLink to={`/edit/${item.id}`}>Edit</NavLink>
-                            <button type="button" onClick={() => handleDeleteProfile(item.id)}>Delete</button>
+            <div className='container'>
+                {loading && <div>Loading...</div>}
+                {error && <div>{error}</div>}
+                {!loading && <div className='profile-list'>
+                    {profiles && profiles.map(item => (
+                        <div key={item.id} className='profile-card'>
+                            <h2 className='name'>{item.Name}</h2>
+                            <p className='email'><b>Email: </b>{item.email}</p>
+                            <div className='group'>
+                                <p className='gender'><b>Gender: </b>{item.gender}</p>
+                                <p className='age end'><b>Age: </b>{item.age}</p>
+                            </div>
+                            <div className='btn-group group'>
+                                <NavLink to={`/edit/${item.id}`}>Edit</NavLink>
+                                <button type="button" className='end' onClick={() => handleDeleteProfile(item.id)}>Delete</button>
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>}
+                    ))}
+                </div>}
+            </div>
 
         </>
     )

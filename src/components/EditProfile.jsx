@@ -39,7 +39,7 @@ const EditProfile = () => {
     }
 
     return (
-        <>
+        <div className='container'>
             {loading && <div>Loading...</div>}
             {error && <div>{error}</div>}
             {!loading &&
@@ -54,7 +54,7 @@ const EditProfile = () => {
                     </div>
                     <div className='form-group'>
                         <label>Enter Age</label>
-                        <input type='number' className='form-control' placeholder='Enter Age' name='age' value={formData && formData.age} onChange={newData} />
+                        <input type='text' className='form-control' placeholder='Enter Age' name='age' value={formData && formData.age} onChange={newData} />
                     </div>
                     <div className='form-group'>
                         <label>Select Gender</label>
@@ -68,7 +68,7 @@ const EditProfile = () => {
                     <input type='submit' value="Create Profile" />
                 </form>
             }
-        </>
+        </div>
 
     )
 }

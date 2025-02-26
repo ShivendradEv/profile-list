@@ -1,18 +1,183 @@
+/* Basic CSS */
+.container {
+  padding: 0 5% 40px;
+}
+
+/* Navbar */
+.navbar {
+  padding: 20px;
+  background: #f5f5f5;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.navbar .nav-links a {
+  color: #000;
+  text-decoration: none;
+  margin-right: 25px;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.navbar .nav-links a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  transition: all .5s ease;
+  transform: translateX(-101%);
+}
+
+.navbar .nav-links a.active::before,
+.navbar .nav-links a:hover::before {
+  transform: translateX(0);
+}
+
+/* Grid */
 .profile-list {
   width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 5%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 
 .profile-list .profile-card {
   background: #f5f5f5;
   border-radius: 10px;
   padding: 30px;
-  margin-bottom: 20px;
-  text-align: center;
 }
 
-.profile-list .profile-card:last-of-type {
-  margin-bottom: 0;
+.profile-list .profile-card h2 {
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+
+.profile-list .profile-card p {
+  font-size: 14px;
+  margin: 5px 0 0;
+  line-height: 1.3;
+}
+
+.profile-list .profile-card p.gender {
+  text-transform: capitalize;
+}
+
+.profile-list .profile-card .group {
+  display: flex;
+}
+
+.profile-list .profile-card .group .end {
+  margin-left: auto;
+}
+
+.profile-list .profile-card .btn-group a,
+.profile-list .profile-card .btn-group button {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 5px 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  color: #000;
+  background: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: all .5s ease;
+  line-height: 1;
+}
+
+.profile-list .profile-card .btn-group a:hover,
+.profile-list .profile-card .btn-group button:hover {
+  background: #ccc;
+}
+
+/* Form */
+form {
+  background: #f5f5f5;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+form .form-group {
+  margin-bottom: 20px;
+}
+
+form .form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+form .form-group .form-control {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  width: 100%;
+  height: 35px;
+  padding: 0 10px;
+}
+
+form .form-group .form-control:focus {
+  outline: none;
+}
+
+form .form-group .form-control[type=radio] {
+  height: auto;
+  width: 12px;
+  margin: 0 6px 0 0;
+  position: relative;
+  top: 2px;
+}
+
+form input[type=submit] {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 5px 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  color: #000;
+  background: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: all .5s ease;
+  line-height: 1;
+}
+
+form input[type=submit]:hover {
+  background: #ccc;
+}
+
+@media(max-width: 1600px) {
+  .profile-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media(max-width: 991px) {
+  .profile-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 767px) {
+  .profile-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
